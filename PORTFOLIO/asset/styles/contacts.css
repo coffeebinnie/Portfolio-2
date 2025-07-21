@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Shrikhand', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, #00000000 0%, #D78289 60%, #CE6F79 100%);
+}
+h1.hero-text {
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #FB6F92;
+  z-index: 2;
+  text-align: center;
+}
+
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 2.1rem;
+  cursor: pointer;
+  color:#B8445E ;
+  z-index: 3;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #F3C3C5; 
+  padding: 60px 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  z-index: 2;
+  background: radial-gradient(ellipse at center, #00000000 0%, #E0959C 50%, #F3C3C5 100%);
+}
+
+#menu-toggle:checked + .menu-icon ~ .sidebar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+#menu-toggle:checked ~ .skills-section .skills-left {
+  display: none;
+}
+#menu-toggle {
+  display: none;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: #B8445E;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.sidebar ul li a:hover {
+  color: #FFC3CF; 
+}
+
+.contact-page {
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Shrikhand', cursive;
+  color: #B8445E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px #B8445E;
+  background: radial-gradient(ellipse at center, #FFDDE4 0%,  #FFDDE4 50%, #E0959C 100%);
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #B8445E;
+}
+.contact-container:hover {
+  transform: scale(1.05);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list i {
+  margin-right: 10px;
+  color: #B8445E;
+}
+
+.contact-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.contact-list a {
+  color: #d86c7f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
